@@ -6,15 +6,13 @@ import { ToastrService } from "ngx-toastr";
 import { HttpClient, HttpHeaders } from "@angular/common/http";
 import { DomSanitizer, SafeHtml } from '@angular/platform-browser';
 import { firstValueFrom } from 'rxjs';
-import {NgIf} from "@angular/common";
 
 @Component({
   selector: 'app-login',
   standalone: true,
   imports: [
     FormsModule,
-    ToastComponent,
-    NgIf
+    ToastComponent
   ],
   templateUrl: './login.component.html',
   styleUrl: './login.component.scss'

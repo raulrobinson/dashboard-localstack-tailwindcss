@@ -1,12 +1,12 @@
 import { Routes } from '@angular/router';
 import { DashboardComponent } from "./components/dashboard/dashboard.component";
 import { LoginComponent } from "./pages/auth/login.component";
-import { authGuard } from "./guards/auth.guard";
+import { authGuard } from "@shared/guards/auth.guard";
 import { DynamodbComponent } from "./aws/dynamodb/dynamodb.component";
 import { ResourceBrowserComponent } from "./components/resource-browser/resource-browser.component";
 import { OverviewComponent } from "./components/overview/overview.component";
 import { StatusComponent } from "./components/status/status.component";
-import {S3Component} from "./aws/s3/s3.component";
+import { S3Component } from "./aws/s3/s3.component";
 
 export const routes: Routes = [
   {

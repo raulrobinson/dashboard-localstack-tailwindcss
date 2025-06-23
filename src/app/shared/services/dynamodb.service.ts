@@ -6,7 +6,7 @@ import {
   ListTablesCommand,
   PutItemCommand,
   ScanCommand,
-  ScalarAttributeType, CreateTableCommandInput
+  CreateTableCommandInput
 } from "@aws-sdk/client-dynamodb";
 import {from, Observable} from 'rxjs';
 
@@ -82,20 +82,4 @@ export class DynamodbService {
 
     await this.client.send(new CreateTableCommand(params));
   }
-  /*createTable(tableName: string): Observable<any> {
-    const params = {
-      TableName: tableName,
-      AttributeDefinitions: [
-        { AttributeName: 'id', AttributeType: ScalarAttributeType.S },
-      ],
-      KeySchema: [
-        { AttributeName: 'id', KeyType: 'HASH' },
-      ],
-      ProvisionedThroughput: {
-        ReadCapacityUnits: 1,
-        WriteCapacityUnits: 1,
-      },
-    } as CreateTableCommandInput;
-    return from(this.client.send(new CreateTableCommand(params)));
-  }*/
 }

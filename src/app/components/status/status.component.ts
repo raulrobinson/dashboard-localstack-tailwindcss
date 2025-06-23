@@ -1,16 +1,12 @@
 import { Component, effect, inject } from '@angular/core';
-import { LocalstackHealthService } from "../../services/localstack-health.service";
-import { NgForOf, NgIf } from "@angular/common";
+import { LocalstackHealthService } from "@shared/services/localstack-health.service";
 import { Router } from "@angular/router";
 import { ServiceRouteMap } from "@shared/resources";
 
 @Component({
   selector: 'app-status',
   standalone: true,
-  imports: [
-    NgIf,
-    NgForOf
-  ],
+  imports: [],
   templateUrl: './status.component.html',
   styleUrl: './status.component.scss'
 })

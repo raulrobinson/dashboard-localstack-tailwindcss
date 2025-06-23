@@ -1,6 +1,6 @@
-import {Component, inject} from '@angular/core';
-import {Router} from "@angular/router";
-import {Resources} from "@shared/resources";
+import { Component, inject } from '@angular/core';
+import { Router } from "@angular/router";
+import { Resources } from "@shared/resources";
 
 @Component({
   selector: 'app-resource-browser',

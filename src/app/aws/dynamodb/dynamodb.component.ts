@@ -1,5 +1,5 @@
 import { Component, inject, signal } from '@angular/core';
-import { DynamodbService } from "../../services/dynamodb.service";
+import { DynamodbService } from "@shared/services/dynamodb.service";
 import { JsonPipe } from "@angular/common";
 import { ToastrService } from 'ngx-toastr';
 import { ToastComponent } from "../../components/toast/toast.component";

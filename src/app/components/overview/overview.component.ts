@@ -1,11 +1,10 @@
 import { Component, effect, inject } from '@angular/core';
-import { LocalstackHealthService } from '../../services/localstack-health.service';
-import { NgIf } from '@angular/common';
+import { LocalstackHealthService } from '@shared/services/localstack-health.service';
 
 @Component({
   selector: 'app-overview',
   standalone: true,
-  imports: [NgIf],
+  imports: [],
   templateUrl: './overview.component.html',
   styleUrl: './overview.component.scss'
 })
