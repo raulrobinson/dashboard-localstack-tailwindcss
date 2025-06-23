@@ -1,6 +1,8 @@
-# Dashboard for AWS Localstack 
+<p align="center">
+  <img src="https://raw.githubusercontent.com/localstack/localstack/master/docs/localstack-readme-banner.svg" alt="LocalStack - A fully functional local cloud stack">
+</p>
 
-This project is a dashboard for managing AWS Localstack resources. It provides a user-friendly interface to interact with various AWS services running locally.
+LocalStack is a cloud software development framework to develop and test your AWS applications locally.
 
 ## How to run the project
 
