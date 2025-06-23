@@ -40,7 +40,7 @@
                   [message]="'¿Estás seguro de eliminar la tabla ' + table + '?'"
                   (confirm)="deleteTable(table)"
                 >
-                  <lucide-angular [img]="FileIcon" color="red" class="my-icon"></lucide-angular>
+                  <lucide-angular [img]="trash" color="red" class="my-icon"></lucide-angular>
                 </app-confirm-dialog>
               </li>
             }
@@ -73,7 +73,7 @@
                 (click)="deleteItem(item)"
                 title="Eliminar item"
               >
-                <lucide-angular [img]="FileIcon" color="red" class="my-icon"></lucide-angular>
+                <lucide-angular [img]="trash" color="red" class="my-icon"></lucide-angular>
               </button>
             </div>
           }

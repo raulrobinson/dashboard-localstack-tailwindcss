@@ -25,7 +25,7 @@ export class DynamodbComponent {
   selectedTable = signal<string>('');
   items = signal<any[]>([]);
   loading = signal(false);
-  readonly FileIcon = Trash;
+  readonly trash = Trash;
 
   toastMessage = '';
   toastType: 'success' | 'error' = 'success';
