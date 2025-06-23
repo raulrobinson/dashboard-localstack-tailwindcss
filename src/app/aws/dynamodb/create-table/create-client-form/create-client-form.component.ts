@@ -1,6 +1,6 @@
 import { Component, EventEmitter, inject, Output } from '@angular/core';
 import { FormsModule } from "@angular/forms";
-import { DynamodbService } from "../../../../services/dynamodb.service";
+import { DynamodbService } from "@shared/services/dynamodb.service";
 import { ToastrService } from "ngx-toastr";
 
 @Component({

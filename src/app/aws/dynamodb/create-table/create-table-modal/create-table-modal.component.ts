@@ -2,7 +2,7 @@ import { Component, EventEmitter, Output, inject } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { CommonModule } from '@angular/common';
 import { ToastrService } from 'ngx-toastr';
-import { DynamodbService } from "../../../../services/dynamodb.service";
+import { DynamodbService } from "@shared/services/dynamodb.service";
 
 @Component({
   selector: 'app-create-table-modal',

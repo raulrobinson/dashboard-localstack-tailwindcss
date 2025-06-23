@@ -1,10 +1,11 @@
 import { Component, inject, signal } from '@angular/core';
-import { DynamodbService } from "../../services/dynamodb.service";
+import { DynamodbService } from "@shared/services/dynamodb.service";
 import { CreateTableButtonComponent } from "../../aws/dynamodb/create-table/create-table-button/create-table-button.component";
 import { ConfirmDialogComponent } from "../../aws/dynamodb/confirm-dialog/confirm-dialog.component";
 import { CreateClientFormComponent } from "../../aws/dynamodb/create-table/create-client-form/create-client-form.component";
-import { JsonPipe, NgForOf, NgIf } from "@angular/common";
+import { JsonPipe, NgOptimizedImage } from "@angular/common";
 import { ToastrService } from "ngx-toastr";
+import { LucideAngularModule } from 'lucide-angular';
 
 @Component({
   selector: 'app-dinamodb',
@@ -13,9 +14,9 @@ import { ToastrService } from "ngx-toastr";
     CreateTableButtonComponent,
     ConfirmDialogComponent,
     CreateClientFormComponent,
-    NgIf,
     JsonPipe,
-    NgForOf
+    NgOptimizedImage,
+    LucideAngularModule
   ],
   templateUrl: './dinamodb.component.html',
   styleUrl: './dinamodb.component.scss'

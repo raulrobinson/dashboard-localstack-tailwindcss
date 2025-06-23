@@ -24,11 +24,19 @@
           #usernameField="ngModel"
           class="w-full mt-2 px-3 py-2 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-blue-500"
         />
-        <p *ngIf="usernameField.invalid && usernameField.touched" class="text-sm text-red-600 mt-1">
-          <span *ngIf="usernameField.errors?.['required']">El usuario es obligatorio.</span>
-          <span *ngIf="usernameField.errors?.['minlength']">Mínimo 4 caracteres.</span>
-          <span *ngIf="usernameField.errors?.['maxlength']">Máximo 20 caracteres.</span>
-        </p>
+        @if (usernameField.invalid && usernameField.touched) {
+          <p class="text-sm text-red-600 mt-1">
+            @if (usernameField.errors?.['required']) {
+              <span>El usuario es obligatorio.</span>
+            }
+            @if (usernameField.errors?.['minlength']) {
+              <span>Mínimo 4 caracteres.</span>
+            }
+            @if (usernameField.errors?.['maxlength']) {
+              <span>Máximo 20 caracteres.</span>
+            }
+          </p>
+        }
       </div>
 
       <!-- Contraseña -->
@@ -43,10 +51,16 @@
           #passwordField="ngModel"
           class="w-full mt-2 px-3 py-2 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-blue-500"
         />
-        <p *ngIf="passwordField.invalid && passwordField.touched" class="text-sm text-red-600 mt-1">
-          <span *ngIf="passwordField.errors?.['required']">La contraseña es obligatoria.</span>
-          <span *ngIf="passwordField.errors?.['minlength']">Mínimo 6 caracteres.</span>
-        </p>
+        @if (passwordField.invalid && passwordField.touched) {
+          <p class="text-sm text-red-600 mt-1">
+            @if (passwordField.errors?.['required']) {
+              <span>La contraseña es obligatoria.</span>
+            }
+            @if (passwordField.errors?.['minlength']) {
+              <span>Mínimo 6 caracteres.</span>
+            }
+          </p>
+        }
       </div>
 
       <!-- CAPTCHA -->
@@ -64,9 +78,11 @@
           #captchaField="ngModel"
           class="w-full mt-2 px-3 py-2 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-blue-500"
         />
-        <p *ngIf="captchaField.invalid && captchaField.touched" class="text-sm text-red-600 mt-1">
-          El captcha es obligatorio.
-        </p>
+        @if (captchaField.invalid && captchaField.touched) {
+          <p class="text-sm text-red-600 mt-1">
+            El captcha es obligatorio.
+          </p>
+        }
       </div>
 
       <!-- Botón -->

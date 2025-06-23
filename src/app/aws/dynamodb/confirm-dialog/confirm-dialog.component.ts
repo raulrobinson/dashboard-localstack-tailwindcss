@@ -1,11 +1,10 @@
 import { AfterViewInit, Component, EventEmitter, Input, Output } from '@angular/core';
-import { NgIf } from "@angular/common";
 
 @Component({
   selector: 'app-confirm-dialog',
   standalone: true,
   imports: [
-    NgIf
+
   ],
   templateUrl: './confirm-dialog.component.html',
   styleUrl: './confirm-dialog.component.scss'

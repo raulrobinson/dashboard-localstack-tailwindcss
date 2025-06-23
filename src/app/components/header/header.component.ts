@@ -1,5 +1,5 @@
-import {Component, inject} from '@angular/core';
-import {Router} from "@angular/router";
+import { Component, inject } from '@angular/core';
+import { Router } from "@angular/router";
 
 @Component({
   selector: 'app-header',
@@ -10,12 +10,7 @@ import {Router} from "@angular/router";
 })
 export class HeaderComponent {
   router = inject(Router);
-  selectedTab: string = 'overview';
   showMenu = false;
-
-  setTab(tab: string) {
-    this.selectedTab = tab;
-  }
 
   toggleMenu() {
     this.showMenu = !this.showMenu;
@@ -25,5 +20,4 @@ export class HeaderComponent {
     localStorage.removeItem('auth');
     this.router.navigate(['/login']);
   }
-
 }
