@@ -1,6 +1,49 @@
-# DashboardLocalstackTailwindcss
+# Dashboard for AWS Localstack 
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 17.3.17.
+This project is a dashboard for managing AWS Localstack resources. It provides a user-friendly interface to interact with various AWS services running locally.
+
+## How to run the project
+
+1. **Clone the repository**:
+   ```bash
+   git clone https://github.com/raulrobinson/dashboard-localstack-tailwindcss
+   ```
+
+2. **Navigate to the project directory**:
+   ```bash
+    cd dashboard-localstack-tailwindcss
+    ```
+   
+3. **Install LocalStack infrastructure** (if not already installed):
+   ```bash
+   docker-compose up -d
+   ``` 
+   
+4. **Install dependencies**:
+   ```bash
+   npm install --force
+   ```
+   
+5. **Start the Localstack service**:
+   ```bash
+   ng serve
+   ```
+   
+### Dashboard Preview
+
+![img.png](documentation/images/img.png)
+
+### Status of Localstack services
+
+![img_1.png](documentation/images/img_1.png)
+
+### Resource Browser
+
+![img_2.png](documentation/images/img_2.png)
+
+### DynamoDB 
+
+![img_3.png](documentation/images/img_3.png)
 
 ## Development server
 
