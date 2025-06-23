@@ -1,0 +1,30 @@
+<div class="p-6 bg-white rounded shadow">
+  <div class="mx-4 my-4 text-sm text-gray-600">
+    LocalStack version: <strong>{{ health()?.version }}</strong> ({{ health()?.edition }})
+  </div>
+
+  <ng-container *ngIf="health(); else loading">
+    <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-3">
+      <div
+        *ngFor="let key of Object.keys(health()?.services || {})"
+        (click)="navigateIfRunning(key)"
+        class="rounded p-3 flex items-center justify-between border transition"
+        [class.cursor-pointer]="health()?.services[key] === 'running'"
+        [class.border-green-400]="health()?.services[key] === 'running'"
+        [class.bg-green-50]="health()?.services[key] === 'running'"
+        [class.border-gray-300]="health()?.services[key] !== 'running'"
+        [class.bg-gray-100]="health()?.services[key] !== 'running'"
+        [class.cursor-not-allowed]="health()?.services[key] !== 'running'"
+      >
+        <span class="font-medium">{{ key }}</span>
+        <span class="text-sm">
+          {{ getStatusEmoji(health().services[key]) }} {{ health().services[key] }}
+        </span>
+      </div>
+    </div>
+  </ng-container>
+
+  <ng-template #loading>
+    <p class="text-gray-500 text-sm">Cargando estado...</p>
+  </ng-template>
+</div>

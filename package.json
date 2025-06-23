@@ -1,6 +1,8 @@
 {
   "name": "dashboard-localstack-tailwindcss",
-  "version": "0.0.0",
+  "version": "1.0.0",
+  "description": "Angular dashboard with LocalStack and Tailwind CSS",
+  "author": "Raul Bolivar Navas",
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
@@ -18,7 +20,13 @@
     "@angular/platform-browser": "^17.3.0",
     "@angular/platform-browser-dynamic": "^17.3.0",
     "@angular/router": "^17.3.0",
+    "@aws-sdk/client-dynamodb": "^3.830.0",
+    "@tailwindcss/postcss": "^4.1.10",
+    "aws-svg-icons": "^3.0.0-2021-07-30",
+    "ngx-toastr": "^19.0.0",
+    "postcss": "^8.5.6",
     "rxjs": "~7.8.0",
+    "tailwindcss": "^4.1.10",
     "tslib": "^2.3.0",
     "zone.js": "~0.14.3"
   },
