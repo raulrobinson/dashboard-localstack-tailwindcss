@@ -31,6 +31,15 @@ LocalStack is a cloud software development framework to develop and test your AW
    ng serve
    ```
    
+### Access the application:
+Open your web browser and navigate to `http://localhost:4200/`.
+
+Credentials for the Localstack dashboard are:
+- **Username**: ***admin***
+- **Password**: ***admin123***
+
+![img.png](documentation/images/login.png)
+
 ### Dashboard Preview
 
 ![img.png](documentation/images/img.png)
