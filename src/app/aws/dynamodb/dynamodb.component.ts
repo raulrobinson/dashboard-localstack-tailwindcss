@@ -5,7 +5,7 @@ import { ToastrService } from 'ngx-toastr';
 import { ToastComponent } from "../../components/toast/toast.component";
 import { CreateClientFormComponent } from "./create-table/create-client-form/create-client-form.component";
 import { ConfirmDialogComponent } from "./confirm-dialog/confirm-dialog.component";
-import { ItemField } from "./create-table/create-item-form/create-item-form.component";
+import { LucideAngularModule, Trash } from 'lucide-angular';
 
 @Component({
   selector: 'app-dynamodb',
@@ -15,6 +15,7 @@ import { ItemField } from "./create-table/create-item-form/create-item-form.comp
     ToastComponent,
     CreateClientFormComponent,
     ConfirmDialogComponent,
+    LucideAngularModule,
   ],
   templateUrl: './dynamodb.component.html',
   styleUrl: './dynamodb.component.scss'
@@ -24,6 +25,7 @@ export class DynamodbComponent {
   selectedTable = signal<string>('');
   items = signal<any[]>([]);
   loading = signal(false);
+  readonly FileIcon = Trash;
 
   toastMessage = '';
   toastType: 'success' | 'error' = 'success';
